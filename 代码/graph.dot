@@ -1,0 +1,41 @@
+digraph G {
+    graph [rankdir=TB, ranksep=0.5, layout=dot];
+    subgraph "cluster_G" {
+
+        graph [style="filled,rounded", fillcolor="#80808018", label=""];
+        "tool_chat_client" [label="tool_chat_client", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client\nD:\skyai\practice02\tool_chat_client.py"];
+        "tool_chat_client__chat_with_tools" [label="chat_with_tools", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.chat_with_tools\nD:\skyai\practice02\tool_chat_client.py:118\nfunction in tool_chat_client"];
+        "tool_chat_client__create_file" [label="create_file", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.create_file\nD:\skyai\practice02\tool_chat_client.py:42\nfunction in tool_chat_client"];
+        "tool_chat_client__curl" [label="curl", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.curl\nD:\skyai\practice02\tool_chat_client.py:60\nfunction in tool_chat_client"];
+        "tool_chat_client__delete_file" [label="delete_file", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.delete_file\nD:\skyai\practice02\tool_chat_client.py:34\nfunction in tool_chat_client"];
+        "tool_chat_client__execute_tool" [label="execute_tool", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.execute_tool\nD:\skyai\practice02\tool_chat_client.py:152\nfunction in tool_chat_client"];
+        "tool_chat_client__get_current_date" [label="get_current_date", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.get_current_date\nD:\skyai\practice02\tool_chat_client.py:79\nfunction in tool_chat_client"];
+        "tool_chat_client__get_system_prompt" [label="get_system_prompt", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.get_system_prompt\nD:\skyai\practice02\tool_chat_client.py:90\nfunction in tool_chat_client"];
+        "tool_chat_client__list_files" [label="list_files", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.list_files\nD:\skyai\practice02\tool_chat_client.py:9\nfunction in tool_chat_client"];
+        "tool_chat_client__main" [label="main", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.main\nD:\skyai\practice02\tool_chat_client.py:176\nfunction in tool_chat_client"];
+        "tool_chat_client__read_file" [label="read_file", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.read_file\nD:\skyai\practice02\tool_chat_client.py:51\nfunction in tool_chat_client"];
+        "tool_chat_client__rename_file" [label="rename_file", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_chat_client.rename_file\nD:\skyai\practice02\tool_chat_client.py:25\nfunction in tool_chat_client"];
+    }
+        "tool_chat_client" -> "tool_chat_client__chat_with_tools" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__create_file" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__curl" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__delete_file" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__execute_tool" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__get_current_date" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__get_system_prompt" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__list_files" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__main" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__main" [style="solid",  color="#000000"];
+        "tool_chat_client" -> "tool_chat_client__read_file" [style="dashed",  color="#838b8b"];
+        "tool_chat_client" -> "tool_chat_client__rename_file" [style="dashed",  color="#838b8b"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__create_file" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__curl" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__delete_file" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__get_current_date" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__list_files" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__read_file" [style="solid",  color="#000000"];
+        "tool_chat_client__execute_tool" -> "tool_chat_client__rename_file" [style="solid",  color="#000000"];
+        "tool_chat_client__main" -> "tool_chat_client__chat_with_tools" [style="solid",  color="#000000"];
+        "tool_chat_client__main" -> "tool_chat_client__execute_tool" [style="solid",  color="#000000"];
+        "tool_chat_client__main" -> "tool_chat_client__get_system_prompt" [style="solid",  color="#000000"];
+    }
